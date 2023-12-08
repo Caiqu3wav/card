@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+   <main>
+    <div class="main-container">
+    <div class="card-images-container">
+      <div id="card-one">
+       <div class="ball-one"></div>
+       <div class="ball-two"></div>
+      <div class="card-content">
+        <div id="displayNumber">0000 0000 0000 0000</div>
+        <div class="card-content-two-front">
+        <div id="displayName">Jane Appleseed</div>
+        <div id="displayExpiry">00/00</div>
+      </div>
+      </div>
+      </div>
+      <div id="card-two">
+        <div class="card-content-two">
+          <div id="displayCvc">000</div>
+        </div>
+      </div>
+    </div>
+<div class="form-container">
+    <form id="form-card">
+      <label for="card-name">CARDHOLDER NAME</label> <br>
+      <input type="text" id="card-name" placeholder="Ex: Jane Appleseed" oninput="updateCard('cardName');" required> <br>
+      <label for="card-number">CARD NUMBER</label> <br>
+      <input size="50" type="number" placeholder="2556 7593 2636 7515" maxlength="16" id="card-number" oninput="validarNumeroCartao (this); updateCard('cardNumber');" required>
+      <div id="erroNumeroCartao" class="error"></div>
+    <div class="form-two-container">
+      <div class="form-two-content">
+      <label for="ext-date">EXP. DATE (MM/YY)</label><br>
+      <div class="input-date">
+      <input type="number" id="inputMonth" placeholder="MM" min="1" max="12" oninput="validarDataCartao (this); updateCard('cardExpiry');" required>
+      <input type="number" id="inputYear" placeholder="YY" oninput="validarDataCartao (this); updateCard('cardExpiry');" required>
+      </div><div id="erroDataCartao" class="error"></div></div>
+    <div class="form-cvc">
+     <label for="card-cvc">CVC</label><br>
+     <div class="input-cvc">
+      <input type="number" name="card-cvc" id="cvc-input" placeholder="e.g. 123" maxlength="3" oninput="validarCvcCartao (this); updateCard('cardCvc');" required></div><div id="erroCvcCartao" class="error"></div>
+    </div></div>
+      <button id="submit-btn" onclick="getExpiry()" type="submit">Confirm</button>
+    </form>
+  </div>
+  </div>
+  </div>
+  </div>
+   </main>
+</body>
+</html>
