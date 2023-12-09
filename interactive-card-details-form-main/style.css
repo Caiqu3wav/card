@@ -54,13 +54,17 @@ height: fit-content;
 color: white;
 }
 
+#displayNumber, #displayName, #displayExpiry, #displayCvc{
+    font-size: 23px;
+  }
+
 #numeroCartao{
     font-size: 33px;
 }
 
 .card-content-two{
     position: relative;
-    top: 110px;
+    top: 102px;
     right: -350px;
     color: white;
     }
@@ -100,7 +104,7 @@ margin-top: 120px;
         height: 240px;
         width: 447px;
         margin-left: 5rem;
-        border-radius: 20px;
+        border-radius: 220;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
         }
     
@@ -125,7 +129,7 @@ margin-top: 120px;
         }
 
         #form-card ::placeholder{
-            padding-left: 20px;
+            padding-left: 220;
         }
 
         .error{
@@ -171,13 +175,14 @@ margin-top: 120px;
 
          .form-two-container{
            display: flex;
-           gap: 20px;
+           gap: 220;
            margin-top: 40px;
          }
 
          .form-cvc{
            display: flex;
            flex-direction: column;
+           margin-left: 20px;
          }
          
         #submit-btn{
@@ -197,6 +202,21 @@ margin-top: 120px;
         @media screen and (max-width: 1137px) {
             .form-container{
                 margin-left: 80px;
+            }
+
+            .ball-one{
+                width: 40px;
+                padding-left: 40px;
+            }
+
+            .ball-two{
+                width: 20px;
+                margin-left: 15px;
+                padding-left: 15px;
+            }
+
+            .card-content{
+                top: 105px;
             }
         }
 
@@ -246,6 +266,7 @@ margin-top: 120px;
             #card-two{
                 width: 330px;
                 margin-top: 50px;
+                border-radius: 15px;
             }
 
             #card-one{
@@ -264,14 +285,14 @@ margin-top: 120px;
 
             .card-content{
                 right: 80px;
-                top: 100px;
+                top: 85px;
             }
 
             .ball-one{
                 width: 40px;
                 margin: 0;
                 padding-left: 40px;
-                padding-top: 20px;
+                padding-top: 220;
                 margin-top: 20px;
                 margin-left: 20px;
             }
@@ -279,9 +300,13 @@ margin-top: 120px;
             .ball-two{
                 width: 40px;
                 margin: 0;
-                padding-left: 20px;
+                padding-left: 17px;
                 margin-top: 30px;
                 margin-left: 10px;
+            }
+
+            .card-content-two-front{
+                gap: 120px;
             }
         }
 
@@ -303,6 +328,10 @@ margin-top: 120px;
         .main-container{
             flex-direction: column;
         }
+
+        #displayNumber, #displayName, #displayExpiry, #displayCvc{
+            font-size: 17px;
+          }
         
         main{
         background-size: cover;
@@ -324,12 +353,14 @@ margin-top: 120px;
 
         .form-container{
             margin: 0 0 0 0;
+            padding-bottom: 30px;
         }
 
         .card-images-container{
             padding: 0;
+            width: 340px;
+            margin-top: 30px;
             flex-direction: column-reverse;
-            height: 340px;
         }
 
         .main-container{
@@ -337,41 +368,170 @@ margin-top: 120px;
         }
 
     #card-one{
-        width: 330px;
+        width: 280px;
         position: relative;
         bottom: 60px;
-        height: 470px;
+        height: 160px;
+        margin: 0;
+        border-radius: 15px;
+        background-position: center;
     }
 
     #card-two{
-        width: 330px;
-        height: 440px;
+        width: 280px;
+        height: 160px;
+        border-radius: 15px;
+        margin-top: 0;
+        margin-left: 60px;
+        background-position: center;
+        background-size: cover;
     }
 
     .ball-one{
         width: 30px;
-        padding-left: 30px;
-        height: 30px;
+        padding-left: 25px;
+        height: 25px;
+        margin-top: 10px;
+        margin-left: 20px;
     }
 
     .ball-two{
         width: 30px;
-        padding-left: 15px;
-        height: 15px;
+        padding-left: 13px;
+        height: 13px;
+        margin-top: 17px;
     }
 
+
     .card-content{
-        top: 40px;
+        top: 39px;
         right: 60px;
     }
 
     .card-content-two{
-       top: 60px;
+       top: 65px;
+       right: -220px;
     }
+
+    .card-content-two-front{
+        gap: 120px;
+     }
         }
 
         @media screen and (max-width: 669px) {
          .form-container label{
             font-size: 16px;
          }
+        }
+
+        @media screen and (max-width: 346px) {
+          #card-one, #card-two{
+            width: 220px;
+          }
+
+          .card-images-container{
+            height: 280px;
+            width: 100%;
+          }
+
+          main{
+            height: 210px;
+          }
+
+          .card-content-two-front{
+            margin-top: 24px;
+            gap: 20px;
+            font-size: 14px;
+          }
+
+          #displayNumber, #displayName, #displayExpiry, #displayCvc{
+            font-size: 16px;
+          }
+
+          #displayNumber{
+            width: 200px;
+          }
+          
+          #card-two{
+            margin-left: 100px;
+          }
+
+          .card-content-two{
+            right: -170px;
+            top: 57px;
+          }
+
+          .form-container{
+            width: 300px;
+          }
+
+          input[type=text], input[type=number] {
+            width: 90%;
+        }
+    }
+
+        @media screen and (max-width: 326px) {
+            main{
+                height: 190px;
+            }
+            
+            #card-one, #card-two{
+                width: 190px;
+              }
+
+              .card-content-two{
+                right: -150px;
+                top: 52px;
+              }
+
+              #displayNumber, #displayName, #displayExpiry, #displayCvc{
+                font-size: 14px;
+              }
+
+              .card-images-container{
+                height: 250px;
+              }
+
+              .form-container{
+                width: 90%;
+                padding-bottom: 0px;
+              }
+        }
+
+        @media screen and (max-width: 297px) {
+            #card-one, #card-two{
+                width: 160px;
+              }
+        
+              .card-images-container{
+                height: 230px;
+              }
+
+              main{
+                height: 170px;
+              }
+
+              #displayNumber, #displayName, #displayExpiry, #displayCvc{
+                font-size: 12px;
+              }
+
+              .ball-one{
+                margin-left: 13px;
+                padding-left: 20px;
+                height: 20px;
+              }
+
+              .ball-two{
+                height: 9px;
+                padding-left: 9px;
+              }
+
+              .card-content{
+                right: 50px;
+              }
+
+              .card-content-two{
+                top: 49px;
+                right: -130px;
+              }
         }
