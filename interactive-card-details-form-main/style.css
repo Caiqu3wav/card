@@ -91,6 +91,7 @@ main{
 
 #displayNumber{
     height: 30px;
+    width: fit-content;
 }
 
 .card-content{
@@ -118,8 +119,11 @@ color: white;
 
 .card-content-two-front{
 display: flex;
-gap: 160px;
 margin-top: 30px;
+}
+
+#displayName{
+  width: 300px;
 }
 
 .card-images-container{
@@ -382,8 +386,9 @@ margin-top: 120px;
                 margin-left: 10px;
             }
 
-            .card-content-two-front{
-                gap: 120px;
+            #displayName{
+                width: 240px;
+                font-size: 18px;
             }
         }
 
@@ -490,10 +495,6 @@ margin-top: 120px;
        right: -220px;
     }
 
-    .card-content-two-front{
-        gap: 120px;
-     }
-
      #approvalMessage{
         top: 0;
         left: 20px;
@@ -502,6 +503,10 @@ margin-top: 120px;
      #loadingIcon{
         top: 70px;
         left: 0;
+     }
+
+     #displayName{
+        width: 210px;
      }
         }
 
@@ -537,12 +542,11 @@ margin-top: 120px;
 
           .card-content-two-front{
             margin-top: 24px;
-            gap: 20px;
             font-size: 14px;
           }
 
           #displayNumber, #displayName, #displayExpiry, #displayCvc{
-            font-size: 16px;
+            font-size: 15px;
           }
 
           #displayNumber{
@@ -565,6 +569,10 @@ margin-top: 120px;
           input[type=text], input[type=number] {
             width: 90%;
         }
+
+        #displayName{
+            width: 160px;
+        }
     }
 
     @media screen and (max-width: 330px) {
@@ -573,6 +581,14 @@ margin-top: 120px;
         #approvalMessage {
             width: 270px;
             left: -10px;
+        }
+
+        .card-content-two-front{
+         margin-top: 7px;
+        }
+
+        #displayName{
+            width: 132px;
         }
       }
 
