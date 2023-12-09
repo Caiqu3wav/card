@@ -1,6 +1,6 @@
 function getExpiry() {
-    var mes = document.getElementById('month').value;
-    var ano = document.getElementById('year').value;
+    var mes = document.getElementById('inputMonth').value;
+    var ano = document.getElementById('inputYear').value;
 
     var expiryDate = mes + '/' + ano;
     console.log(expiryDate);
@@ -69,4 +69,29 @@ function validarDataCartao(input) {
             input.classList.remove('error-border');
             erroCvcCartao.textContent = '';
         }
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve,ms));
+        }
+
+        async function submitCard() {
+
+            document.getElementById('loadingIcon').style.display = 'block';
+
+            document.getElementById('formCard').style.display = 'none';
+
+            try {
+                await sleep(9000);
+            } catch (error) {
+                console.error('Erro durante o atraso:', error);
+            } finally {
+                document.getElementById('loadingIcon').style.display = 'none';
+
+                document.getElementById('approvalMessage').style.display = 'block';
+            }
+        }
+
+        function resetPage(){
+            location.reload();
         }

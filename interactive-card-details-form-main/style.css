@@ -24,6 +24,53 @@ main{
     flex-direction: row;
 }
 
+#loadingIcon{
+    position: relative;
+    top: 280px;
+    left: 250px;
+    display: none;
+}
+
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+#spinner{
+    border: 4px solid rgb(0, 0, 0, 0.1);
+    border-top: 4px solid #333;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+#approvalMessage{
+    position: relative;
+    top: 230px;
+    left: 150px;
+    display: none;
+    gap: 20px;
+    text-align: center;
+    height: fit-content;
+}
+
+#approvalMessage h1{
+    font-size: 30px;
+}
+
+
+#approvalMessage button{
+            width: 100%;
+            height: 40px;
+            color: white;
+            background-color: rgb(45, 18, 71);
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+}
+
 #card-one{
     display: flex;
 }
@@ -199,6 +246,25 @@ margin-top: 120px;
             background-color: black;
         }
 
+        @media screen and (max-width: 1258px) {
+            #approvalMessage{
+                left: 90px;
+            }
+        }
+
+        @media screen and (max-width: 1182px) {
+            #approvalMessage{
+                left: 50px;
+            }
+        }
+
+        @media screen and (max-width: 1142px) {
+            #approvalMessage{
+                width: 360px;
+            }
+        }
+
+
         @media screen and (max-width: 1137px) {
             .form-container{
                 margin-left: 80px;
@@ -223,6 +289,17 @@ margin-top: 120px;
         @media screen and (max-width: 1086px) {
             .form-container{
                 margin-left: 40px;
+            }
+
+            #approvalMessage{
+                width: 300px;
+            }
+        }
+
+        @media screen and (max-width: 1070px) {
+
+            #loadingIcon{
+                left: 180px;
             }
         }
 
@@ -416,12 +493,32 @@ margin-top: 120px;
     .card-content-two-front{
         gap: 120px;
      }
+
+     #approvalMessage{
+        top: 0;
+        left: 20px;
+     }
+
+     #loadingIcon{
+        top: 70px;
+        left: 0;
+     }
         }
 
         @media screen and (max-width: 669px) {
          .form-container label{
             font-size: 16px;
          }
+        }
+
+        @media screen and (max-width: 390px) {
+          #approvalMessage h1{
+            font-size: 22px;
+          }
+
+          #approvalMessage button{
+            width: 80%;
+          }
         }
 
         @media screen and (max-width: 346px) {
@@ -469,6 +566,15 @@ margin-top: 120px;
             width: 90%;
         }
     }
+
+    @media screen and (max-width: 330px) {
+        
+
+        #approvalMessage {
+            width: 270px;
+            left: -10px;
+        }
+      }
 
         @media screen and (max-width: 326px) {
             main{

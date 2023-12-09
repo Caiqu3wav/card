@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-<div class="form-container">
+<div id="formCard" class="form-container">
     <form id="form-card">
       <label for="card-name">CARDHOLDER NAME</label> <br>
       <input type="text" id="card-name" placeholder="Ex: Jane Appleseed" oninput="updateCard('cardName');" required> <br>
@@ -38,19 +38,23 @@
       <div id="erroNumeroCartao" class="error"></div>
     <div class="form-two-container">
       <div class="form-two-content">
-      <label for="ext-date">EXP. DATE (MM/YY)</label><br>
+      <label for="inputMonth">EXP. DATE (MM/YY)</label><br>
       <div class="input-date">
       <input type="number" id="inputMonth" placeholder="MM" min="1" max="12" oninput="validarDataCartao (this); updateCard('cardExpiry');" required>
       <input type="number" id="inputYear" placeholder="YY" oninput="validarDataCartao (this); updateCard('cardExpiry');" required>
       </div><div id="erroDataCartao" class="error"></div></div>
     <div class="form-cvc">
-     <label for="card-cvc">CVC</label><br>
+     <label for="cvc-input">CVC</label><br>
      <div class="input-cvc">
-      <input type="number" name="card-cvc" id="cvc-input" placeholder="e.g. 123" maxlength="3" oninput="validarCvcCartao (this); updateCard('cardCvc');" required></div><div id="erroCvcCartao" class="error"></div>
+      <input type="number" id="cvc-input" placeholder="e.g. 123" maxlength="3" oninput="validarCvcCartao (this); updateCard('cardCvc');" required></div><div id="erroCvcCartao" class="error"></div>
     </div></div>
-      <button id="submit-btn" onclick="getExpiry()" type="submit">Confirm</button>
+      <button type="button" id="submit-btn" onclick="getExpiry(); submitCard();">Confirm</button>
     </form>
   </div>
+  <div id="loadingIcon"><div id="spinner"></div></div>
+  <div id="approvalMessage"><img src="images/icon-complete.svg" alt=""><h1>OBRIGADO!</h1>
+  <p>As informações do seu cartão foram adicionadas.</p>
+<button type="button" onclick="resetPage()">Continue</button></div>
   </div>
   </div>
   </div>
